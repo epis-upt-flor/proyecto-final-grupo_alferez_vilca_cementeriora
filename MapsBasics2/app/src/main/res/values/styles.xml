@@ -2,7 +2,11 @@
 <resources>
     <style name="FullScreenDialog" parent="ShapeAppearanceOverlay.MaterialComponents.MaterialCalendar.Window.Fullscreen">
         <item name = "android:windowAnimationStyle">@style/Animation.AppCompat.Dialog</item>
-
-
     </style>
+    <style name="MyTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FF0000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
