@@ -39,11 +39,11 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         view?.let {
             when(it.id){
                 R.id.btnFirstMap -> startActivity(Intent(this, FirstMapActivity::class.java))
-                R.id.btnNewProcessor -> startActivity(Intent(this, NewProcessorActivity::class.java))
-                R.id.btnPanorama -> startActivity(Intent(this, PanoramaActivity::class.java))
+                R.id.btnNewProcessor -> startActivity(Intent(this, NewsActivity::class.java))
+                R.id.btnPanorama -> startActivity(Intent(this, ObituarioActivity::class.java))
                 R.id.btnCameraView -> startActivity(Intent(this, CameraViewActivity::class.java))
                 R.id.btnHistoria -> startActivity(Intent(this, IlustresActivity::class.java))
-                R.id.btnInfo -> startActivity(Intent(this, ObituarioActivity::class.java))
+                R.id.btnInfo -> startActivity(Intent(this, InfoAppActivity::class.java))
                 R.id.btnArtistMap -> startActivity(Intent(this, ArtistMapActivity::class.java))
                 R.id.btnLiteList -> startActivity(Intent(this, FirstMapActivity::class.java))
                 R.id.btnFormMap -> startActivity(Intent(this, FormActivity::class.java))

@@ -30,6 +30,9 @@
             android:name=".topics.InfoAppActivity"
             android:exported="false" />
         <activity
+            android:name=".topics.NewsActivity"
+            android:exported="false" />
+        <activity
             android:name=".actividades.SplashActivity"
             android:exported="true">
             <intent-filter>
