@@ -8,6 +8,7 @@ import android.view.View.OnClickListener
 import com.example.mapsbasics2.artistForm.FormActivity
 import com.example.mapsbasics2.artistMap.ArtistMapActivity
 import com.example.mapsbasics2.databinding.ActivityMainBinding
+import com.example.mapsbasics2.obituario.ObituarioActivity
 import com.example.mapsbasics2.topics.*
 
 class MainActivity : AppCompatActivity(), OnClickListener {
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 R.id.btnPanorama -> startActivity(Intent(this, PanoramaActivity::class.java))
                 R.id.btnCameraView -> startActivity(Intent(this, CameraViewActivity::class.java))
                 R.id.btnHistoria -> startActivity(Intent(this, IlustresActivity::class.java))
-                R.id.btnInfo -> startActivity(Intent(this, InfoAppActivity::class.java))
+                R.id.btnInfo -> startActivity(Intent(this, ObituarioActivity::class.java))
                 R.id.btnArtistMap -> startActivity(Intent(this, ArtistMapActivity::class.java))
                 R.id.btnLiteList -> startActivity(Intent(this, FirstMapActivity::class.java))
                 R.id.btnFormMap -> startActivity(Intent(this, FormActivity::class.java))
