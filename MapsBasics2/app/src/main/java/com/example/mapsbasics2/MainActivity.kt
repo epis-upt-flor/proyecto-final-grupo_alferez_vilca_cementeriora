@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         view?.let {
             when(it.id){
                 R.id.btnFirstMap -> startActivity(Intent(this, FirstMapActivity::class.java))
-                R.id.btnNewProcessor -> startActivity(Intent(this, NewsActivity::class.java))
+                R.id.btnNewProcessor -> startActivity(Intent(this, NewProcessorActivity::class.java))
                 R.id.btnPanorama -> startActivity(Intent(this, PanoramaActivity::class.java))
                 R.id.btnCameraView -> startActivity(Intent(this, CameraViewActivity::class.java))
                 R.id.btnHistoria -> startActivity(Intent(this, IlustresActivity::class.java))
