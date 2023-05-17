@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             btnArtistMap.setOnClickListener(this@MainActivity)
             btnLiteList.setOnClickListener(this@MainActivity)
             btnFormMap.setOnClickListener(this@MainActivity)
+            btnRA.setOnClickListener(this@MainActivity)
 
         }
     }
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 R.id.btnHistoria -> startActivity(Intent(this, IlustresActivity::class.java))
                 R.id.btnInfo -> startActivity(Intent(this, InfoAppActivity::class.java))
                 R.id.btnArtistMap -> startActivity(Intent(this, ArtistMapActivity::class.java))
+                R.id.btnRA -> startActivity(Intent(this, ARCementerio::class.java))
                 R.id.btnLiteList -> startActivity(Intent(this, FirstMapActivity::class.java))
                 R.id.btnFormMap -> startActivity(Intent(this, FormActivity::class.java))
             }
