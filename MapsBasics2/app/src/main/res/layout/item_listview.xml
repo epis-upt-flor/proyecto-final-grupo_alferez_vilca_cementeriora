@@ -15,6 +15,14 @@
         tools:text="Nombre" />
 
     <TextView
+        android:id="@+id/tvItemApellidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="Apellidos" />
+
+    <TextView
         android:id="@+id/tvItemEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -11,7 +11,7 @@ class miSQLiteHelper(context: Context) : SQLiteOpenHelper(
     override fun onCreate(db: SQLiteDatabase?) {
         val ordenCreacion = "CREATE TABLE amigos " +
                 "(_id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "nombre TEXT, email TEXT)"
+                "nombre TEXT, apellidos TEXT, email TEXT)"
         db!!.execSQL(ordenCreacion)
     }
 
@@ -22,9 +22,10 @@ class miSQLiteHelper(context: Context) : SQLiteOpenHelper(
         onCreate(db)
     }
 
-    fun anyadirDato(nombre: String, email: String) {
+    fun anyadirDato(nombre: String, apellidos: String, email: String) {
         val datos = ContentValues()
         datos.put("nombre", nombre)
+        datos.put("apellidos", apellidos)
         datos.put("email", email)
 
         val db = this.writableDatabase
@@ -42,11 +43,12 @@ class miSQLiteHelper(context: Context) : SQLiteOpenHelper(
         return borrados
     }
 
-    fun modificarDato(id: Int, nombre: String, email: String) {
+    fun modificarDato(id: Int, nombre: String, apellidos: String,email: String) {
         val args = arrayOf(id.toString())
 
         val datos = ContentValues()
         datos.put("nombre", nombre)
+        datos.put("apellidos", apellidos)
         datos.put("email", email)
 
         val db = this.writableDatabase

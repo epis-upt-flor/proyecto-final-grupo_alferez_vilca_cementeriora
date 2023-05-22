@@ -21,11 +21,12 @@ class ObituarioActivity : AppCompatActivity() {
         amigosDBHelper = miSQLiteHelper(this)
 
         binding.btGuardar.setOnClickListener {
-            if (binding.etNombre.text.isNotBlank() &&
+            if (binding.etNombre.text.isNotBlank() && binding.etApellidos.text.isNotBlank() &&
                 binding.etEmail.text.isNotBlank()) {
-                amigosDBHelper.anyadirDato(binding.etNombre.text.toString(),
+                amigosDBHelper.anyadirDato(binding.etNombre.text.toString(),binding.etApellidos.text.toString(),
                     binding.etEmail.text.toString())
                 binding.etNombre.text.clear()
+                binding.etApellidos.text.clear()
                 binding.etEmail.text.clear()
                 Toast.makeText(this, "Guardado",
                     Toast.LENGTH_SHORT).show()
@@ -50,7 +51,9 @@ class ObituarioActivity : AppCompatActivity() {
                     binding.tvConsulta.append(
                         cursor.getString(1).toString()+ ", ")
                     binding.tvConsulta.append(
-                        cursor.getString(2).toString() + "\n")
+                        cursor.getString(2).toString()+ ", ")
+                    binding.tvConsulta.append(
+                        cursor.getString(3).toString() + "\n")
                 } while (cursor.moveToNext())
             }
 
@@ -75,13 +78,16 @@ class ObituarioActivity : AppCompatActivity() {
 
         binding.btModificar.setOnClickListener {
             if (binding.etNombre.text.isNotBlank() &&
+                binding.etApellidos.text.isNotBlank() &&
                 binding.etEmail.text.isNotBlank() &&
                 binding.etId.text.isNotBlank()) {
                 amigosDBHelper.modificarDato(
                     binding.etId.text.toString().toInt(),
                     binding.etNombre.text.toString(),
+                    binding.etApellidos.text.toString(),
                     binding.etEmail.text.toString())
                 binding.etNombre.text.clear()
+                binding.etApellidos.text.clear()
                 binding.etEmail.text.clear()
                 binding.etId.text.clear()
                 Toast.makeText(this, "Modificado",

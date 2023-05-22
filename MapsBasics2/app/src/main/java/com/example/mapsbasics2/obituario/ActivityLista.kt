@@ -52,11 +52,13 @@ class ActivityLista : AppCompatActivity() {
                               context: Context?, cursor: Cursor?) {
             val bindingItems = ItemListviewBinding.bind(view!!)
             bindingItems.tvItemNombre.text = cursor!!.getString(1)
-            bindingItems.tvItemEmail.text = cursor!!.getString(2)
+            bindingItems.tvItemApellidos.text = cursor!!.getString(2)
+            bindingItems.tvItemEmail.text = cursor!!.getString(3)
 
             view.setOnClickListener {
                 Toast.makeText(this@ActivityLista,
                     "${bindingItems.tvItemNombre.text}, " +
+                            "${bindingItems.tvItemApellidos.text}, " +
                             "${bindingItems.tvItemEmail.text}",
                     Toast.LENGTH_SHORT).show()
             }
