@@ -18,18 +18,18 @@ import com.example.mapsbasics2.databinding.ItemListviewBinding
 class ActivityLista : AppCompatActivity() {
 
     lateinit var binding: ActivityListaBinding
-    lateinit var amigosDBHelper: miSQLiteHelper
+    lateinit var obituarioDBHelper: miSQLiteHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         binding = ActivityListaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        amigosDBHelper = miSQLiteHelper(this)
+        obituarioDBHelper = miSQLiteHelper(this)
 
-        val db : SQLiteDatabase = amigosDBHelper.readableDatabase
+        val db : SQLiteDatabase = obituarioDBHelper.readableDatabase
         val cursor = db.rawQuery(
-            "SELECT * FROM amigos",
+            "SELECT * FROM obituario",
             null)
 
         val adaptador = CursorAdapterListView(this, cursor)
@@ -53,13 +53,15 @@ class ActivityLista : AppCompatActivity() {
             val bindingItems = ItemListviewBinding.bind(view!!)
             bindingItems.tvItemNombre.text = cursor!!.getString(1)
             bindingItems.tvItemApellidos.text = cursor!!.getString(2)
-            bindingItems.tvItemEmail.text = cursor!!.getString(3)
+            bindingItems.tvItemFecha.text = cursor!!.getString(3)
+            bindingItems.tvItemLugar.text = cursor!!.getString(4)
 
             view.setOnClickListener {
                 Toast.makeText(this@ActivityLista,
                     "${bindingItems.tvItemNombre.text}, " +
                             "${bindingItems.tvItemApellidos.text}, " +
-                            "${bindingItems.tvItemEmail.text}",
+                            "${bindingItems.tvItemFecha.text}, " +
+                            "${bindingItems.tvItemLugar.text}",
                     Toast.LENGTH_SHORT).show()
             }
 

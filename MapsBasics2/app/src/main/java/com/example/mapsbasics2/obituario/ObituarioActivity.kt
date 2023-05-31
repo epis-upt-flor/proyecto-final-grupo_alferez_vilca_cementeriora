@@ -10,7 +10,7 @@ import com.example.mapsbasics2.databinding.ActivityObituarioBinding
 class ObituarioActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityObituarioBinding
-    lateinit var amigosDBHelper: miSQLiteHelper
+    lateinit var obituarioDBHelper: miSQLiteHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,16 +18,18 @@ class ObituarioActivity : AppCompatActivity() {
         binding = ActivityObituarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        amigosDBHelper = miSQLiteHelper(this)
+        obituarioDBHelper = miSQLiteHelper(this)
 
         binding.btGuardar.setOnClickListener {
             if (binding.etNombre.text.isNotBlank() && binding.etApellidos.text.isNotBlank() &&
-                binding.etEmail.text.isNotBlank()) {
-                amigosDBHelper.anyadirDato(binding.etNombre.text.toString(),binding.etApellidos.text.toString(),
-                    binding.etEmail.text.toString())
+                binding.etFecha.text.isNotBlank() && binding.etLugar.text.isNotBlank()) {
+                obituarioDBHelper.anyadirDato(binding.etNombre.text.toString(),binding.etApellidos.text.toString(),
+                    binding.etFecha.text.toString(), binding.etLugar.text.toString())
+                binding.etId.text.clear()
                 binding.etNombre.text.clear()
                 binding.etApellidos.text.clear()
-                binding.etEmail.text.clear()
+                binding.etFecha.text.clear()
+                binding.etLugar.text.clear()
                 Toast.makeText(this, "Guardado",
                     Toast.LENGTH_SHORT).show()
             }
@@ -39,9 +41,9 @@ class ObituarioActivity : AppCompatActivity() {
 
         binding.btConsultar.setOnClickListener {
             binding.tvConsulta.text = ""
-            val db : SQLiteDatabase = amigosDBHelper.readableDatabase
+            val db : SQLiteDatabase = obituarioDBHelper.readableDatabase
             val cursor = db.rawQuery(
-                "SELECT * FROM amigos",
+                "SELECT * FROM obituario",
                 null)
 
             if (cursor.moveToFirst()) {
@@ -53,7 +55,9 @@ class ObituarioActivity : AppCompatActivity() {
                     binding.tvConsulta.append(
                         cursor.getString(2).toString()+ ", ")
                     binding.tvConsulta.append(
-                        cursor.getString(3).toString() + "\n")
+                        cursor.getString(3).toString()+ ", ")
+                    binding.tvConsulta.append(
+                        cursor.getString(4).toString() + "\n")
                 } while (cursor.moveToNext())
             }
 
@@ -64,7 +68,7 @@ class ObituarioActivity : AppCompatActivity() {
             var cantidad = 0
 
             if (binding.etId.text.isNotBlank()) {
-                cantidad = amigosDBHelper.borrarDato(
+                cantidad = obituarioDBHelper.borrarDato(
                     binding.etId.text.toString().toInt())
                 binding.etId.text.clear()
             }
@@ -79,16 +83,19 @@ class ObituarioActivity : AppCompatActivity() {
         binding.btModificar.setOnClickListener {
             if (binding.etNombre.text.isNotBlank() &&
                 binding.etApellidos.text.isNotBlank() &&
-                binding.etEmail.text.isNotBlank() &&
+                binding.etFecha.text.isNotBlank() &&
+                binding.etLugar.text.isNotBlank() &&
                 binding.etId.text.isNotBlank()) {
-                amigosDBHelper.modificarDato(
+                obituarioDBHelper.modificarDato(
                     binding.etId.text.toString().toInt(),
                     binding.etNombre.text.toString(),
                     binding.etApellidos.text.toString(),
-                    binding.etEmail.text.toString())
+                    binding.etFecha.text.toString(),
+                    binding.etLugar.text.toString())
                 binding.etNombre.text.clear()
                 binding.etApellidos.text.clear()
-                binding.etEmail.text.clear()
+                binding.etFecha.text.clear()
+                binding.etLugar.text.clear()
                 binding.etId.text.clear()
                 Toast.makeText(this, "Modificado",
                     Toast.LENGTH_SHORT).show()

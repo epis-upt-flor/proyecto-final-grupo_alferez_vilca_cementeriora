@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Id"
+        android:hint="ID"
         android:inputType="number" />
 
     <EditText
@@ -32,12 +32,20 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/etFecha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="E-mail"
-        android:inputType="textEmailAddress" />
+        android:hint="Fecha"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etLugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Lugar"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/btGuardar"

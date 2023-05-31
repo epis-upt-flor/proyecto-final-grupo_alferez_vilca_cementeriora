@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         with(binding){
             btnFirstMap.setOnClickListener(this@MainActivity)
             btnNewProcessor.setOnClickListener(this@MainActivity)
+            //btnBasadre.setOnClickListener(this@MainActivity)
             btnPanorama.setOnClickListener(this@MainActivity)
             btnCameraView.setOnClickListener(this@MainActivity)
             btnHistoria.setOnClickListener(this@MainActivity)
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             when(it.id){
                 R.id.btnFirstMap -> startActivity(Intent(this, FirstMapActivity::class.java))
                 R.id.btnNewProcessor -> startActivity(Intent(this, NewsActivity::class.java))
+                //R.id.btnBasadre -> startActivity(Intent(this, FormActivity::class.java))
                 R.id.btnPanorama -> startActivity(Intent(this, ObituarioActivity::class.java))
                 R.id.btnCameraView -> startActivity(Intent(this, CameraViewActivity::class.java))
                 R.id.btnHistoria -> startActivity(Intent(this, IlustresActivity::class.java))

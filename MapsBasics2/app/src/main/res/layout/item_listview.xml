@@ -10,6 +10,7 @@
         android:id="@+id/tvItemNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:textSize="24sp"
         android:textStyle="bold"
         tools:text="Nombre" />
@@ -23,11 +24,19 @@
         tools:text="Apellidos" />
 
     <TextView
-        android:id="@+id/tvItemEmail"
+        android:id="@+id/tvItemFecha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        tools:text="Correo electrónico" />
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="Fecha" />
+
+    <TextView
+        android:id="@+id/tvItemLugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="Lugar" />
 </LinearLayout>
