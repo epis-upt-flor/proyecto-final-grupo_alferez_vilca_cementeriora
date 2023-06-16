@@ -55,13 +55,15 @@ class ActivityLista : AppCompatActivity() {
             bindingItems.tvItemApellidos.text = cursor!!.getString(2)
             bindingItems.tvItemFecha.text = cursor!!.getString(3)
             bindingItems.tvItemLugar.text = cursor!!.getString(4)
+            bindingItems.tvItemInfo.text = cursor!!.getString(5)
 
             view.setOnClickListener {
                 Toast.makeText(this@ActivityLista,
                     "${bindingItems.tvItemNombre.text}, " +
                             "${bindingItems.tvItemApellidos.text}, " +
                             "${bindingItems.tvItemFecha.text}, " +
-                            "${bindingItems.tvItemLugar.text}",
+                            "${bindingItems.tvItemLugar.text}, " +
+                            "${bindingItems.tvItemInfo.text}",
                     Toast.LENGTH_SHORT).show()
             }
 

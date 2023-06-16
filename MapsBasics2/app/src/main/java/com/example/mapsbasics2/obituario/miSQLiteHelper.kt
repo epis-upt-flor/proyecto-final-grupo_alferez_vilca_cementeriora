@@ -11,7 +11,7 @@ class miSQLiteHelper(context: Context) : SQLiteOpenHelper(
     override fun onCreate(db: SQLiteDatabase?) {
         val ordenCreacion = "CREATE TABLE obituario " +
                 "(_id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "nombre TEXT, apellidos TEXT, fecha TEXT, lugar TEXT)"
+                "nombre TEXT, apellidos TEXT, fecha TEXT, lugar TEXT, info TEXT)"
         db!!.execSQL(ordenCreacion)
     }
 
@@ -22,12 +22,13 @@ class miSQLiteHelper(context: Context) : SQLiteOpenHelper(
         onCreate(db)
     }
 
-    fun anyadirDato(nombre: String, apellidos: String, fecha: String, lugar: String) {
+    fun anyadirDato(nombre: String, apellidos: String, fecha: String, lugar: String, info: String) {
         val datos = ContentValues()
         datos.put("nombre", nombre)
         datos.put("apellidos", apellidos)
         datos.put("fecha", fecha)
         datos.put("lugar", lugar)
+        datos.put("info", info)
 
         val db = this.writableDatabase
         db.insert("obituario", null, datos)
@@ -44,7 +45,7 @@ class miSQLiteHelper(context: Context) : SQLiteOpenHelper(
         return borrados
     }
 
-    fun modificarDato(id: Int, nombre: String, apellidos: String, fecha: String, lugar: String) {
+    fun modificarDato(id: Int, nombre: String, apellidos: String, fecha: String, lugar: String, info: String) {
         val args = arrayOf(id.toString())
 
         val datos = ContentValues()
@@ -52,6 +53,7 @@ class miSQLiteHelper(context: Context) : SQLiteOpenHelper(
         datos.put("apellidos", apellidos)
         datos.put("fecha", fecha)
         datos.put("lugar", lugar)
+        datos.put("info", info)
 
         val db = this.writableDatabase
         db.update("obituario", datos, "_id = ?", args)

@@ -22,14 +22,15 @@ class ObituarioActivity : AppCompatActivity() {
 
         binding.btGuardar.setOnClickListener {
             if (binding.etNombre.text.isNotBlank() && binding.etApellidos.text.isNotBlank() &&
-                binding.etFecha.text.isNotBlank() && binding.etLugar.text.isNotBlank()) {
+                binding.etFecha.text.isNotBlank() && binding.etLugar.text.isNotBlank() && binding.etInfo.text.isNotBlank()) {
                 obituarioDBHelper.anyadirDato(binding.etNombre.text.toString(),binding.etApellidos.text.toString(),
-                    binding.etFecha.text.toString(), binding.etLugar.text.toString())
+                    binding.etFecha.text.toString(), binding.etLugar.text.toString(), binding.etInfo.text.toString())
                 binding.etId.text.clear()
                 binding.etNombre.text.clear()
                 binding.etApellidos.text.clear()
                 binding.etFecha.text.clear()
                 binding.etLugar.text.clear()
+                binding.etInfo.text.clear()
                 Toast.makeText(this, "Guardado",
                     Toast.LENGTH_SHORT).show()
             }
@@ -57,7 +58,9 @@ class ObituarioActivity : AppCompatActivity() {
                     binding.tvConsulta.append(
                         cursor.getString(3).toString()+ ", ")
                     binding.tvConsulta.append(
-                        cursor.getString(4).toString() + "\n")
+                        cursor.getString(4).toString()+ ", ")
+                    binding.tvConsulta.append(
+                        cursor.getString(5).toString() + "\n")
                 } while (cursor.moveToNext())
             }
 
@@ -85,17 +88,20 @@ class ObituarioActivity : AppCompatActivity() {
                 binding.etApellidos.text.isNotBlank() &&
                 binding.etFecha.text.isNotBlank() &&
                 binding.etLugar.text.isNotBlank() &&
+                binding.etInfo.text.isNotBlank() &&
                 binding.etId.text.isNotBlank()) {
                 obituarioDBHelper.modificarDato(
                     binding.etId.text.toString().toInt(),
                     binding.etNombre.text.toString(),
                     binding.etApellidos.text.toString(),
                     binding.etFecha.text.toString(),
-                    binding.etLugar.text.toString())
+                    binding.etLugar.text.toString(),
+                    binding.etInfo.text.toString())
                 binding.etNombre.text.clear()
                 binding.etApellidos.text.clear()
                 binding.etFecha.text.clear()
                 binding.etLugar.text.clear()
+                binding.etInfo.text.clear()
                 binding.etId.text.clear()
                 Toast.makeText(this, "Modificado",
                     Toast.LENGTH_SHORT).show()

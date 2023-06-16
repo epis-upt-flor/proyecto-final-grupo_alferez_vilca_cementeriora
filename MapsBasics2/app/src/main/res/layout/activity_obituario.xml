@@ -5,12 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/imgobituario"
     tools:context=".MainActivity" >
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="OBITUARIO" />
 
     <EditText
         android:id="@+id/etId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:ems="10"
         android:hint="ID"
         android:inputType="number" />
@@ -19,6 +36,8 @@
         android:id="@+id/etNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName" />
@@ -27,6 +46,8 @@
         android:id="@+id/etApellidos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:ems="10"
         android:hint="Apellidos"
         android:inputType="textPersonName" />
@@ -35,6 +56,8 @@
         android:id="@+id/etFecha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:ems="10"
         android:hint="Fecha"
         android:inputType="text" />
@@ -43,38 +66,65 @@
         android:id="@+id/etLugar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:ems="10"
         android:hint="Lugar"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:hint="Informacion"
         android:inputType="text" />
 
     <Button
         android:id="@+id/btGuardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/naranja"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:text="Guardar" />
 
     <Button
         android:id="@+id/btModificar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/naranja"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:text="Modificar" />
 
     <Button
         android:id="@+id/btBorrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/naranja"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:text="Borrar" />
 
     <Button
         android:id="@+id/btConsultarLV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/naranja"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:text="Consultar en ListView" />
 
     <Button
         android:id="@+id/btConsultar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/naranja"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:text="Consultar aquí" />
 
     <TextView
