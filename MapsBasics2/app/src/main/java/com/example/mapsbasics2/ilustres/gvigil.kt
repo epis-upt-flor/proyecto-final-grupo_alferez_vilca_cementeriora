@@ -23,13 +23,9 @@ class gvigil : AppCompatActivity() {
         val textView2 = findViewById<TextView>(R.id.textView16)
         val textView3 = findViewById<TextView>(R.id.textView17)
 
-        textView0.text = "\nNacimiento: 12 de febrero de 1903, Tacna"
-        textView1.text = "Fallecimiento: 29 de junio de 1980, Lima"
-        textView2.text = "Profesión: Historiador e Historiógrafo Peruano\n"
-        textView3.text = "Jorge Basadre Grohmann fue un destacado historiador peruano, bajo administración chilena en ese entonces.\n Su infancia estuvo marcada por el ambiente de lucha y defensa de la identidad peruana en Tacna. " +
-                "Realizó sus estudios en Lima y se graduó en Letras y Derecho en la Universidad Nacional Mayor de San Marcos.\n " +
-                "Basadre tuvo una destacada carrera académica y profesional, ocupando cargos como catedrático, director de bibliotecas y ministro de Educación.\n " +
-                "Fue reconocido por su labor en la reconstrucción de la Biblioteca Nacional del Perú y por su amplia investigación historiográfica.\n " +
-                "Dejando un legado importante en el campo de la historia peruana.\n"
+        textView0.text = "\nNacimiento: 13 de Setiembre de 1792, Tacna"
+        textView1.text = "Fallecimiento: 9 de junio de 1875, Lima"
+        textView2.text = "Profesión: Clérigo, político, periodista, educador, escritor\n"
+        textView3.text = "Francisco de Paula González-Vigil Yáñez o simplemente, Vigil, fue un clérigo, político e intelectual peruano. Fue uno de los más tenaces representantes del liberalismo político en medio de la anarquía y el caudillismo en que se debatía la naciente república peruana.\n " + "Fue elegido ocho veces diputado y una vez senador ante el Congreso de la República del Perú. Destacó por sus dotes de orador.\n" + " Como vicepresidente de la Cámara de Diputados se hizo célebre por su famoso discurso titulado Yo acuso, pronunciado el 2 de noviembre de 1832 en la sede legislativa, denunciando al presidente de la República Agustín Gamarra por haber violado la Constitución.\n " + "Escribió obras muy extensas defendiendo la separación de la Iglesia del Estado. Llegó a sufrir la excomunión papal en tres ocasiones sin retractarse jamás de sus ideas, y seis de sus libros fueron incluidos por la Santa Sede en el Índice de Libros Prohibidos, en vida del autor.\n"
     }
 }

@@ -33,13 +33,9 @@ class fbarreto : AppCompatActivity() {
         val textView2 = findViewById<TextView>(R.id.textView16)
         val textView3 = findViewById<TextView>(R.id.textView17)
 
-        textView0.text = "\nNacimiento: 12 de febrero de 1903, Tacna"
-        textView1.text = "Fallecimiento: 29 de junio de 1980, Lima"
-        textView2.text = "Profesión: Historiador e Historiógrafo Peruano\n"
-        textView3.text = "Jorge Basadre Grohmann fue un destacado historiador peruano, bajo administración chilena en ese entonces.\n Su infancia estuvo marcada por el ambiente de lucha y defensa de la identidad peruana en Tacna. " +
-                "Realizó sus estudios en Lima y se graduó en Letras y Derecho en la Universidad Nacional Mayor de San Marcos.\n " +
-                "Basadre tuvo una destacada carrera académica y profesional, ocupando cargos como catedrático, director de bibliotecas y ministro de Educación.\n " +
-                "Fue reconocido por su labor en la reconstrucción de la Biblioteca Nacional del Perú y por su amplia investigación historiográfica.\n " +
-                "Dejando un legado importante en el campo de la historia peruana.\n"
+        textView0.text = "\nNacimiento: 8 de febrero de 1868, Tacna"
+        textView1.text = "Fallecimiento: 30 de Octubre de 1929, Francia"
+        textView2.text = "Profesión: Poeta y Periodista Peruano\n"
+        textView3.text = "Federico Barreto Bustíos fue un poeta peruano conocido como «El cantor del cautiverio» o «El poeta del cautiverio».\n Vivió en Tacna durante la ocupación chilena que siguió a la Guerra del Pacífico y llevó a cabo una intensa vida intelectual y periodística, abogando por la peruanidad de los territorios ocupados por Chile y oponiéndose a la chilenización." + "Fue miembro fundador del semanario El Progresista (1886) y del Círculo Vigil (1888).\n" + " Con su hermano José María, integró el grupo literario llamado La Bohemia Tacneña, en cuya revista literaria Letras colaboraron, entre 1896 y 1898, escritores como Rubén Darío, Clemente Palma, José Enrique Rodó y José Santos Chocano.\n" + "Con su hermano Federico María Barreto fue codirector del diario La Voz del Sur. En 1911 una turba chilena destruyó las imprentas que publicaban los dos diarios peruanos de Tacna: La Voz del Sur y El Tacora.\n"
     }
 }

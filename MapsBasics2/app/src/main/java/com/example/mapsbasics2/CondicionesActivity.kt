@@ -1,6 +1,8 @@
 package com.example.mapsbasics2
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.text.SpannableStringBuilder
@@ -59,14 +61,5 @@ class CondicionesActivity : AppCompatActivity() {
                 "Al utilizar nuestra plataforma de Cementerio con Realidad Aumentada, aceptas cumplir con estas condiciones de uso. Te recomendamos revisar periódicamente las condiciones, ya que pueden actualizarse. Si tienes alguna pregunta o inquietud sobre nuestra política de seguridad y privacidad, no dudes en contactarnos.\n" +
                 "\n" +
                 "Gracias por ser parte de nuestro proyecto y ayudarnos a mantener la seguridad y el respeto hacia los difuntos y sus familias."
-
-
-
-
-
-
-
-
-
     }
 }

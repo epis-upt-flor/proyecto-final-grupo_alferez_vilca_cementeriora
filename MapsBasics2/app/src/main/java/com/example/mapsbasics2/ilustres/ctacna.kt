@@ -35,13 +35,9 @@ class ctacna : AppCompatActivity() {
         val textView2 = findViewById<TextView>(R.id.textView16)
         val textView3 = findViewById<TextView>(R.id.textView17)
 
-        textView0.text = "\nNacimiento: 12 de febrero de 1903, Tacna"
-        textView1.text = "Fallecimiento: 29 de junio de 1980, Lima"
-        textView2.text = "Profesión: Historiador e Historiógrafo Peruano\n"
-        textView3.text = "Jorge Basadre Grohmann fue un destacado historiador peruano, bajo administración chilena en ese entonces.\n Su infancia estuvo marcada por el ambiente de lucha y defensa de la identidad peruana en Tacna. " +
-                "Realizó sus estudios en Lima y se graduó en Letras y Derecho en la Universidad Nacional Mayor de San Marcos.\n " +
-                "Basadre tuvo una destacada carrera académica y profesional, ocupando cargos como catedrático, director de bibliotecas y ministro de Educación.\n " +
-                "Fue reconocido por su labor en la reconstrucción de la Biblioteca Nacional del Perú y por su amplia investigación historiográfica.\n " +
-                "Dejando un legado importante en el campo de la historia peruana.\n"
+        textView0.text = "\nInauguración: 17 de Agosto de 1848, Tacna"
+        textView1.text = "Propietario: Sociedad de Beneficencia Pública de Tacna"
+        textView2.text = "Fundador: Sebastián Ramón Sors\n"
+        textView3.text = "El cementerio se inauguró en una época de oro de Tacna, en pleno auge del comercio que se mantenía con el Alto Perú y el norte argentino.\n" + "Su construcción se debe a la iniciativa de uno de los sacerdotes que llegaron a Tacna, el español Sebastián Ramón Sors quien orientó y dirigió la construcción.\n" + "También impulsó varias obras públicas y tuvo una actuación heroica atendiendo a los enfermos de la terrible fiebre amarilla que acabó con un tercio de la población tacneña, en 1868.\n" + "Los tacneños agradecidos erigieron un mausoleo, en el que reposan sus restos, con un busto que lo recuerda.\n" + "Esta obra, construida en fino mármol, se inauguró el 29 de junio de 1885, apenas concluida la Guerra con Chile, en los primeros años del cautiverio de Tacna.\n"
     }
 }
